@@ -31,6 +31,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -80,6 +82,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,26 +118,52 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Location = new System.Drawing.Point(1, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(252, 520);
+            this.panel3.Size = new System.Drawing.Size(298, 520);
             this.panel3.TabIndex = 2;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(109, 341);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 28;
+            this.button15.Text = "Add photo";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(12, 395);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(76, 13);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "Image location";
+            this.label18.Click += new System.EventHandler(this.label18_Click_1);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 165);
+            this.pictureBox1.Image = global::FirstGUI.Properties.Resources.Default;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 161);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(219, 148);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(76, 105);
+            this.label17.Location = new System.Drawing.Point(92, 105);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(119, 13);
             this.label17.TabIndex = 26;
@@ -435,6 +464,7 @@
             this.button9.TabIndex = 7;
             this.button9.Text = "Add User";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button7
             // 
@@ -485,6 +515,7 @@
             this.button13.TabIndex = 11;
             this.button13.Text = "Add.";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button10
             // 
@@ -494,6 +525,7 @@
             this.button10.TabIndex = 8;
             this.button10.Text = "Delete.";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel5
             // 
@@ -555,6 +587,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Delete...";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button8
             // 
@@ -564,6 +597,7 @@
             this.button8.TabIndex = 6;
             this.button8.Text = "Search...";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
@@ -573,6 +607,7 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "Add...";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel4
             // 
@@ -583,6 +618,16 @@
             this.panel4.Size = new System.Drawing.Size(0, 0);
             this.panel4.TabIndex = 4;
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(323, 589);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(139, 23);
+            this.button16.TabIndex = 26;
+            this.button16.Text = "Change Password";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,6 +635,7 @@
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1300, 699);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -622,7 +668,7 @@
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1000, 39);
             this.Name = "Form1";
-            this.Text = "Echo.Shoes";
+            this.Text = "Eco.Shoes";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -692,6 +738,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }
 
