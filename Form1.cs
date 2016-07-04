@@ -23,20 +23,29 @@ namespace FirstGUI
            // this.FormClosing += OnFormClosing;
         }
 
+ 
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure to close application", "Exit application", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else if (dialogResult == DialogResult.Yes)
+                {
+                    e.Cancel = false;
+                    Application.Exit();
+                }
+            }
+        }
+
+        //Exit button
         private void button1_Click(object sender, EventArgs e)
         {
-
-               DialogResult dialogResult = MessageBox.Show("Are you sure to close application", "Exit application", MessageBoxButtons.YesNo);
-               if (dialogResult == DialogResult.Yes)
-               {
-                Application.Exit();
-            }
-               else if (dialogResult == DialogResult.No)
-               {
-                   //do something else
-               }
-       
+            Close();
         }
 
   
@@ -600,5 +609,7 @@ namespace FirstGUI
         {
 
         }
+
+  
     }
 }
